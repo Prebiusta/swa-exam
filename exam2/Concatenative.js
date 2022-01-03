@@ -13,7 +13,7 @@ function Event(time, place) {
     }
 }
 
-function DataType(time, place, type, unit) {
+function DataType(type, unit) {
     function getType() {
         return type
     }
@@ -23,12 +23,23 @@ function DataType(time, place, type, unit) {
     }
 
     return {
-        ...Event(time, place),
         getType,
         getUnit
     }
+}
 
-    // return Object.assign({getType, getUnit}, Event(time, place))
+function WeatherData(value, time, place, type, unit) {
+    function getValue() {
+        return value
+    }
+
+    return {
+        ...Event(time, place),
+        ...DataType(type, unit),
+        getValue
+    }
+
+    // return Object.assign({getValue}, DataType(type, unit), Event(time, place))
 }
 
 const data = DataType(1, 2, 3, 4)
