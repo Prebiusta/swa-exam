@@ -1,0 +1,15 @@
+{
+  "name": "exam8",
+  "version": "1.0.0",
+  "module": "true",
+  "description": "",
+  "main": "observable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^7.5.1"
+  }
+}
